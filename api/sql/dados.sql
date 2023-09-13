@@ -5,7 +5,7 @@ VALUES
 ("User 3", "user_3", "user_3@gmail.com", "$2a$10$4OAQIOii71MdJy6TMqsyY.NcyufPVpABzicepVR45CBhrDWQiwW3S");
 
 
-insert into seguidores (usuairo_id, seguidor_id)
+insert into seguidores (usuario_id, seguidor_id)
 VALUES
 (1, 2),
 (3, 1),
