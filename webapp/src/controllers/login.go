@@ -4,6 +4,7 @@ import (
 	"bytes"
 	"encoding/json"
 	"fmt"
+	"io"
 	"net/http"
 	"webapp/src/respostas"
 )
@@ -26,5 +27,7 @@ func FazerLogin(w http.ResponseWriter, r *http.Request) {
 		return
 	}
 
-	fmt.Println(response.StatusCode, response.Body)
+	token, _ := io.ReadAll(response.Body)
+
+	fmt.Println(response.StatusCode, string(token))
 }
