@@ -129,6 +129,7 @@ func DeletarPublicacao(w http.ResponseWriter, r *http.Request) {
 	publicacaoID, erro := strconv.ParseUint(parametros["publicacaoId"], 10, 64)
 	if erro != nil {
 		respostas.JSON(w, http.StatusBadRequest, respostas.ErroAPI{Erro: erro.Error()})
+		return
 	}
 
 	url := fmt.Sprintf("%s/publicacoes/%d", config.APIURL, publicacaoID)
